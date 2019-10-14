@@ -1,0 +1,188 @@
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #c1c1c1;
+}
+
+.modal-window {
+  margin: 50px 0;
+
+  &__custome-popup {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    background-color: #305088;
+    border-radius: 30px;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  }
+
+  &__my-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+
+    .cancel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: default;
+    }
+
+    &:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &__popup {
+      margin: 75px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #000;
+      width: 100%;
+      height: auto;
+      max-width: 900px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      position: relative;
+
+      h2 {
+        margin: 0 0 30px 0;
+        color: #000;
+      }
+
+      .close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.8;
+        transition: all 200ms;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #305088;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      p {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  .modal-window {
+    margin: 20px 0;
+
+    &__custome-popup {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: block;
+      background-color: #305088;
+      border-radius: 30px;
+      max-width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+    }
+
+    &__my-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 200ms;
+      visibility: hidden;
+      opacity: 0;
+
+      .cancel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: default;
+      }
+
+      &:target {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &__popup {
+        margin: 75px auto;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #000;
+        width: 100%;
+        height: auto;
+        max-width: 700px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .modal-window {
+    &__my-overlay {
+      &__popup {
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:570px) {
+  .modal-window {
+    &__my-overlay {
+      &__popup {
+        max-width: 300px;
+      }
+    }
+  }
+}
